@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -68,3 +69,79 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bn Idiomas - Aprenda Inglês</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="bn Idiomas"><h1> AQUI VOCÊ APRENDE! </h1>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="nav-links">
+            <a href="#" class="btn-nav">Pré-Matrículas</a>
+            <a href="#" class="btn-nav">Cursos Online</a>
+            <a href="#" class="btn-nav">Quem Somos</a>
+        </nav>
+        
+        <div class="btn-login" aria-label="Login">Login</div>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content"> 
+            <section class="main-title-box" onclick="window.location.href='pagina_infantil.html'">
+                <h1>INFANTIL</h1>
+                <p>Aulas coletivas e individuais</p>
+            </section>
+
+            <section class="main-title-box" onclick="window.location.href='pagina_adulto.html'">
+                <h1>ADULTO</h1>
+                <p>Aulas coletivas e individuais</p>
+            </section>
+        </div>
+    </main>
+
+    <section class="contact-section">
+        <div class="contact-card">
+            <h3>Contate-nos</h3>
+            <form action="mailto:bnindiomasipu@gmail.com" method="POST" enctype="text/plain">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" name="nome" placeholder="Seu nome" required>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Seu e-mail" required>
+
+                <label for="whatsapp">Whatsapp</label>
+                <input id="whatsapp" type="text" name="whatsapp" placeholder="(00) 00000-0000" required>
+
+                <button type="submit" class="btn-send">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 bn Idiomas - Todos os direitos reservados.</p>
+        <p>Desenvolvido com ❤️ para apaixonados por idiomas.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>
+>>>>>>> 53237ec849711a112b816aebee2f8df840fc461e
