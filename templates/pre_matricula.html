@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Pré-Matrícula - bn Idiomas{% endblock %}
+{% block body_class %}page-home{% endblock %}
+
+{% block content %}
+<div class="pre-container">
+    <div class="pre-form-card">
+        <h2>Ficha de Pré-Matrícula</h2>
+        <p>Preencha os seus dados e entraremos em contato em breve!</p>
+        
+        <form action="{{ url_for('enviar_pre_matricula') }}" method="POST">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="(88) 99999-9999" required>
+            </div>
+
+            <div class="form-group">
+                <label for="curso">Curso de Interesse</label>
+                <select id="curso" name="curso" required>
+                    <option value="" disabled selected>Selecione o curso...</option>
+                    <option value="Infantil">Inglês Infantil</option>
+                    <option value="Adulto">Inglês Adulto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nível de Conhecimento</label>
+                <select id="nivel" name="nivel" required>
+                    <option value="" disabled selected>Selecione seu nível...</option>
+                    <option value="Iniciante">Iniciante</option>
+                    <option value="Basico">Básico</option>
+                    <option value="Medio">Médio</option>
+                    <option value="Intermediario">Intermediário</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-nav-red" style="width: 100%; border: none; cursor: pointer; padding: 12px; font-size: 1rem;">
+                Finalizar Inscrição
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

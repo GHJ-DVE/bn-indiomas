@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Login - bn Idiomas{% endblock %}
+{% block body_class %}page-home{% endblock %}
+
+{% block content %}
+<div class="pre-container">
+    <div class="pre-form-card" style="max-width: 400px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 25px;">
+             <div class="logo-container-3d">
+                <img src="{{ url_for('static', filename='img/logo-bn-Idioma.png') }}" 
+                     alt="bn Idiomas" 
+                     class="logo-3d" 
+                     style="height: 80px; width: auto;">
+             </div>
+             <h2 style="margin-top: 20px; color: var(--color-primary);">Acesso Restrito</h2>
+             <p style="font-size: 0.85rem; color: #666;">Portal do Aluno e Professor</p>
+        </div>
+
+        <form action="{{ url_for('login') }}" method="POST">
+            <div class="form-group">
+                <label for="user">Usuário ou E-mail</label>
+                <input type="text" id="user" name="user" placeholder="Seu usuário" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 5px;">
+                <label for="pass">Senha</label>
+                <input type="password" id="pass" name="pass" placeholder="Sua senha" required>
+            </div>
+
+            <div style="text-align: right; margin-bottom: 20px;">
+                <a href="#" style="font-size: 0.75rem; color: var(--color-primary); text-decoration: none;">
+                    Esqueceu a senha? <strong>Clique aqui</strong>
+                </a>
+            </div>
+
+            <button type="submit" class="btn-nav-red" style="width: 100%; padding: 12px; font-size: 1rem; border: none; cursor: pointer;">
+                Entrar
+            </button>
+        </form>
+
+        <div style="margin-top: 25px; text-align: center; border-top: 1px solid #eee; padding-top: 15px;">
+            <p style="font-size: 0.8rem; color: #888;">
+                Problemas com o acesso? <br>
+                <a href="{{ url_for('contato') }}" style="color: var(--color-danger); text-decoration: none; font-weight: bold;">Fale com o suporte</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

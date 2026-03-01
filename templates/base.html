@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}bn Idiomas{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body class="{% block body_class %}{% endblock %}">
+
+    <header class="navbar">
+        <div class="logo-container-3d">
+            <a href="{{ url_for('index') }}" style="display: flex; align-items: center; text-decoration: none; color: white;">
+                <img src="{{ url_for('static', filename='img/logo-bn-Idioma.png') }}" alt="bn Idiomas" class="logo-3d" style="height: 60px; width: auto;">
+                <h1 style="margin-left: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">bn Idiomas</h1>
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('quem_somos') }}">Quem Somos</a>
+            <a href="{{ url_for('videos') }}">Vídeos</a> 
+            <a href="{{ url_for('pre_matricula') }}">Pré-Matrícula</a>
+            <a href="{{ url_for('pagina_infantil') }}">Infantil</a>
+            <a href="{{ url_for('pagina_adulto') }}">Adulto</a>
+            <a href="{{ url_for('contato') }}">Contato</a>
+            <a href="{{ url_for('login') }}" class="btn-nav-red">Login</a>
+        </nav>
+    </header>
+
+    {# Mensagens de Alerta (Flash) #}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-container">
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    {# Rodapé consolidado #}
+    <footer class="site-footer">
+        <p>
+            &copy; 2026 bn Idiomas | 📞 (88) 99905-1377 | ✉️ bnidiomasipu@gmail.com | 
+            <a href="{{ url_for('area_estudante') }}" style="color: white; text-decoration: underline; font-size: 0.75rem;">Área do Aluno</a>
+        </p>
+    </footer>
+
+</body>
+</html>

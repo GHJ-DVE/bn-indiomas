@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}bn Idiomas - Home{% endblock %}
+
+{# Ativa a imagem corpo.png definida no CSS #}
+{% block body_class %}page-home{% endblock %}
+
+{% block content %}
+
+{# Bloco para exibir mensagens de sucesso ou erro (Flash) #}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-container">
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<div class="hero-content"> 
+    <section class="main-title-box infantil" onclick="window.location.href='{{ url_for('pagina_infantil') }}'">
+        <div class="overlay">
+            
+            
+        </div>
+    </section>
+
+    <section class="main-title-box adulto" onclick="window.location.href='{{ url_for('pagina_adulto') }}'">
+        <div class="overlay">
+           
+        </div>
+    </section>
+</div>
+{% endblock %}

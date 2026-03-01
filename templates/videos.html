@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block title %}Galeria de Vídeos - bn Idiomas{% endblock %}
+{% block body_class %}page-home{% endblock %}
+
+{% block content %}
+<div class="pre-container" style="flex-direction: column; align-items: center; padding: 40px 20px;">
+    
+    <div style="text-align: center; color: white; margin-bottom: 50px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        <h1 style="font-size: 2.5rem;">📺 Nossa Videoteca</h1>
+        <p>Conteúdo gratuito para acelerar seu aprendizado.</p>
+    </div>
+
+    <div style="width: 100%; max-width: 1100px; margin-bottom: 60px;">
+        <h2 style="color: #FFD700; border-bottom: 2px solid #FFD700; padding-bottom: 10px; margin-bottom: 25px; text-shadow: 1px 1px 2px #000;">
+            🎨 Para as Crianças (Kids)
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <div class="pre-form-card" style="margin: 0; border-top: 5px solid #FFD700;">
+                <h3 style="color: var(--color-primary);">Aprenda as Cores</h3>
+                <p style="font-size: 0.85rem; color: #666; margin: 15px 0;">Um vídeo lúdico para os pequenos memorizarem as cores em inglês brincando.</p>
+                <a href="https://www.youtube.com/watch?v=ID_KIDS_1" target="_blank" class="btn-nav-red" style="text-align: center; background: #FF0000; text-decoration: none; display: block;">▶ Assistir Agora</a>
+            </div>
+
+            <div class="pre-form-card" style="margin: 0; border-top: 5px solid #FFD700;">
+                <h3 style="color: var(--color-primary);">Números de 1 a 10</h3>
+                <p style="font-size: 0.85rem; color: #666; margin: 15px 0;">Música e animação para facilitar a contagem básica.</p>
+                <a href="https://www.youtube.com/watch?v=ID_KIDS_2" target="_blank" class="btn-nav-red" style="text-align: center; background: #FF0000; text-decoration: none; display: block;">▶ Assistir Agora</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%; max-width: 1100px; margin-bottom: 60px;">
+        <h2 style="color: #00BFFF; border-bottom: 2px solid #00BFFF; padding-bottom: 10px; margin-bottom: 25px; text-shadow: 1px 1px 2px #000;">
+            💼 Para Adultos (Professional)
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            
+            <div class="pre-form-card" style="margin: 0; border-top: 5px solid #00BFFF;">
+                <h3 style="color: var(--color-primary);">Inglês para Entrevistas</h3>
+                <p style="font-size: 0.85rem; color: #666; margin: 15px 0;">Como responder às perguntas mais comuns em processos seletivos.</p>
+                <a href="https://www.youtube.com/watch?v=ID_ADULT_1" target="_blank" class="btn-nav-red" style="text-align: center; background: #FF0000; text-decoration: none; display: block;">▶ Assistir Agora</a>
+            </div>
+
+            <div class="pre-form-card" style="margin: 0; border-top: 5px solid #00BFFF;">
+                <h3 style="color: var(--color-primary);">Dicas de Viagem</h3>
+                <p style="font-size: 0.85rem; color: #666; margin: 15px 0;">Frases essenciais para aeroportos e check-in em hotéis.</p>
+                <a href="https://www.youtube.com/watch?v=ID_ADULT_2" target="_blank" class="btn-nav-red" style="text-align: center; background: #FF0000; text-decoration: none; display: block;">▶ Assistir Agora</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 100%; max-width: 1100px; margin-top: 20px; margin-bottom: 40px;">
+        <h2 style="color: #00ff88; border-bottom: 2px solid #00ff88; padding-bottom: 10px; margin-bottom: 25px; text-shadow: 1px 1px 2px #000; text-align: center;">
+            🌟 Sucesso de nossos Alunos
+        </h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            
+            <div class="pre-form-card" style="margin: 0; background: #fdfdfd; border: 1px solid #00ff88; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🎓</div>
+                <h4 style="color: var(--color-primary);">"Fluência Real"</h4>
+                <p style="font-size: 0.85rem; font-style: italic; color: #555; margin: 15px 0;">
+                    "Assista ao depoimento do nosso aluno que conseguiu a vaga de emprego que tanto queria após o curso."
+                </p>
+                <a href="https://www.youtube.com/watch?v=ID_DEPOIMENTO_1" target="_blank" class="btn-nav-red" style="text-align: center; background: #28a745; text-decoration: none; display: block;">
+                    🎬 Assistir História do Aluno
+                </a>
+            </div>
+
+            <div class="pre-form-card" style="margin: 0; background: #fdfdfd; border: 1px solid #00ff88; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🧸</div>
+                <h4 style="color: var(--color-primary);">"Evolução Kids"</h4>
+                <p style="font-size: 0.85rem; font-style: italic; color: #555; margin: 15px 0;">
+                    "Veja como os pequenos de Ipu estão se divertindo e aprendendo inglês de forma natural."
+                </p>
+                <a href="https://www.youtube.com/watch?v=ID_DEPOIMENTO_2" target="_blank" class="btn-nav-red" style="text-align: center; background: #28a745; text-decoration: none; display: block;">
+                    🎬 Ver Evolução Infantil
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="{{ url_for('index') }}" style="margin-top: 20px; color: white; font-weight: bold; text-decoration: none;">⬅ Voltar para a Home</a>
+</div>
+{% endblock %}

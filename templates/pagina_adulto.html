@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Curso Adulto - bn Idiomas{% endblock %}
+{% block body_class %}page-adulto{% endblock %}
+
+{% block content %}
+<div class="pre-container">
+    <div class="info-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); max-width: 600px; width: 100%; text-align: center;">
+        <h2 style="color: var(--color-primary); margin-bottom: 15px;">Turmas Adultas</h2>
+        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+            Aulas coletivas e individuais para adultos, com foco em <strong>conversação e fluência prática</strong> para o mercado de trabalho, viagens e desenvolvimento acadêmico.
+        </p>
+
+        <div style="background: #f0f7ff; border: 1px solid #cce5ff; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+            <h4 style="color: #004085; margin-bottom: 10px;">Não sabe por onde começar?</h4>
+            <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px;">Descubra seu nível de inglês em apenas alguns minutos com nosso teste online.</p>
+            <a href="{{ url_for('teste_nivel') }}" class="btn-nav-red" style="background-color: #28a745; width: 100%; text-decoration: none; display: block; margin-bottom: 0;">
+                📝 Fazer Teste de Nível Grátis
+            </a>
+        </div>
+
+        <div style="background: var(--color-light); padding: 15px; border-radius: 8px; margin-bottom: 25px; text-align: left;">
+            <h4 style="color: var(--color-secondary); margin-bottom: 10px;">Níveis de Proficiência:</h4>
+            <ul style="list-style: none; font-size: 0.9rem; color: #444;">
+                <li>🚀 <strong>Iniciante:</strong> Para quem nunca teve contato ou sabe muito pouco.</li>
+                <li>💼 <strong>Básico:</strong> Comunicação essencial para situações rotineiras.</li>
+                <li>🌍 <strong>Médio:</strong> Independência para viagens e reuniões simples.</li>
+                <li>🎓 <strong>Intermediário:</strong> Fluência para discussões complexas e negócios.</li>
+            </ul>
+        </div>
+
+        <a href="{{ url_for('pre_matricula') }}" class="btn-nav-red" style="width: 100%; text-decoration: none; display: block;">
+            Fazer Minha Pré-Matrícula agora
+        </a>
+    </div>
+</div>
+
+<div style="margin-top: 20px; text-align: center; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; backdrop-filter: blur(5px);">
+    <p style="color: white; margin-bottom: 10px;">Já é nosso aluno? Acesse seu portal aqui:</p>
+    <a href="{{ url_for('area_estudante') }}" class="btn-nav-red" style="text-decoration: none;">Acessar Área do Estudante</a>
+</div>
+{% endblock %}
